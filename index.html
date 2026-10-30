@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SQL, end to end — an interactive course</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="boot">
+  <div class="boot-card">
+    <h1>SQL, end to end</h1>
+    <p id="boot-msg">Starting the SQL engine…</p>
+    <div class="spinner"></div>
+    <p class="boot-hint">A real SQLite database is loading in this tab. Nothing is sent anywhere.</p>
+  </div>
+</div>
+
+<header class="topbar" hidden>
+  <button class="icon-btn" id="menu-btn" title="Toggle sidebar (Ctrl+B)" aria-label="Toggle sidebar">☰</button>
+  <a class="brand" href="#/">SQL<span>, end to end</span></a>
+  <div class="search-wrap">
+    <input id="search" type="search" placeholder="Search lessons (Ctrl+K)" autocomplete="off" spellcheck="false">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-right">
+    <div class="progress-pill" id="progress-pill" title="Lessons completed">0 / 0</div>
+    <a class="ghost-btn" href="#/playground">Playground</a>
+    <a class="ghost-btn" href="#/reference">Reference</a>
+    <button class="icon-btn" id="theme-btn" title="Toggle light / dark">◐</button>
+  </div>
+</header>
+
+<div class="layout" hidden>
+  <nav class="sidebar" id="sidebar"></nav>
+  <main class="content" id="content" tabindex="-1"></main>
+</div>
+
+<template id="tpl-exercise">
+  <section class="exercise" data-ex>
+    <div class="ex-head">
+      <span class="ex-badge">Exercise</span>
+      <div class="ex-prompt"></div>
+    </div>
+    <div class="editor-wrap">
+      <div class="gutter" aria-hidden="true"></div>
+      <textarea class="editor" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off"></textarea>
+    </div>
+    <div class="ex-actions">
+      <button class="btn primary" data-act="check">Check answer <kbd>Ctrl</kbd>+<kbd>↵</kbd></button>
+      <button class="btn" data-act="run">Run only</button>
+      <button class="btn subtle" data-act="hint">Hint</button>
+      <button class="btn subtle" data-act="solution">Solution</button>
+      <button class="btn subtle" data-act="reset">Reset</button>
+      <span class="ex-state" data-state></span>
+    </div>
+    <div class="ex-feedback" data-feedback hidden></div>
+    <div class="ex-output" data-output></div>
+  </section>
+</template>
+
+<script src="js/vendor/sql-wasm.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/curriculum/01-foundations.js"></script>
+<script src="js/curriculum/02-filtering.js"></script>
+<script src="js/curriculum/03-expressions.js"></script>
+<script src="js/curriculum/04-aggregation.js"></script>
+<script src="js/curriculum/05-joins.js"></script>
+<script src="js/curriculum/06-sets.js"></script>
+<script src="js/curriculum/07-subqueries.js"></script>
+<script src="js/curriculum/08-windows.js"></script>
+<script src="js/curriculum/09-ddl.js"></script>
+<script src="js/curriculum/10-dml.js"></script>
+<script src="js/curriculum/11-objects-transactions.js"></script>
+<script src="js/curriculum/12-design.js"></script>
+<script src="js/curriculum/13-performance.js"></script>
+<script src="js/curriculum/14-advanced.js"></script>
+<script src="js/curriculum/15-capstone.js"></script>
+<script src="js/reference.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
